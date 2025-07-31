@@ -1,0 +1,86 @@
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 2vh;
+    background-color: #f8f9fa;
+}
+
+main {
+    max-width: 80vw;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 1px 1px 20px rgb(98, 97, 97);
+}
+
+section h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #333;
+}
+.heading{
+    text-align: center;
+}
+
+section li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 24px;
+}
+
+#history {
+    background-color: #f0f7fe;
+}
+
+#mission {
+    background-color: #fef4f4;
+}
+
+#team {
+    background-color: #f4fef4;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1.5vh;
+    }
+
+    section {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    section h1 {
+        font-size: 24px;
+    }
+
+    section li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 1vh;
+    }
+
+    section {
+        padding: 10px;
+        margin-bottom: 15px;
+    }
+
+    section h1 {
+        font-size: 20px;
+    }
+
+    section li {
+        font-size: 13px;
+        line-height: 20px;
+    }
+}

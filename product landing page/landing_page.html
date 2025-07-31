@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <link rel="stylesheet" href="land_page.css">
+</head>
+<body>
+    <header>
+        <h1>Introducing Our Revolutionary Product</h1>
+    </header>
+    <main>
+        <section id="product-description">
+            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Wireless headphones product image">
+            <div class="div-para"><div class="inner"><p>Experience audio like never before with our cutting-edge wireless headphones. Designed for ultimate comfort and crystal-clear sound, these headphones feature advanced noise-cancellation technology, a 24-hour battery life, and seamless Bluetooth connectivity. Whether you're immersing yourself in music, taking calls on the go, or enjoying your favorite podcasts, our headphones deliver unmatched quality and style to elevate your everyday audio experience.</p></div></div>
+        </section>
+        <div class="btn">
+        <a href="#signup" class="cta-button">Get Started Now</a>
+        </div>
+        <section id="signup">
+            <h2>Join Our Newsletter</h2>
+            <form action="/subscribe" method="post">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required aria-required="true">
+                
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                
+                <label for="updates">
+                    <input type="checkbox" id="updates" name="updates">
+                    Receive product updates
+                </label>
+                
+                <input type="submit" value="Subscribe">
+            </form>
+        </section>
+    </main>
+</body>
+</html>
