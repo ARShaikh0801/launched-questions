@@ -1,3 +1,27 @@
+:root {
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
+    --bg-color: #f1f5f9;
+    --card-bg: #ffffff;
+    --text-color: #0f172a;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-color: #f8fafc;
+        --text-muted: #94a3b8;
+        --border-color: #334155;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,97 +29,135 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    padding: 2vh;
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.site-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+}
+
+.site-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.site-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
 }
 
 main {
-    max-width: 90vw;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-article {
-    margin-bottom: 30px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.articles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-article h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
+.post-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-article p {
-    font-size: 16px;
-    margin-bottom: 10px;
-    line-height: 24px;
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.post-card h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-color);
+}
+
+.meta {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
 }
 
 .author {
-    font-weight: bold;
+    font-weight: 500;
 }
 
-time {
-    font-style: italic;
-    color: #666;
+.excerpt {
+    font-size: 1rem;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
 }
 
-article a {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: #007bff;
-    color: #fff;
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1.25rem;
+    background-color: var(--primary-color);
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 5px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+    align-self: flex-start;
 }
 
-article a:hover {
-    background-color: #0056b3;
+.read-more:hover {
+    background-color: var(--primary-hover);
 }
 
 @media (max-width: 768px) {
     body {
-        padding: 1.5vh;
+        padding: 1.5rem 1rem;
     }
 
-    article {
-        padding: 15px;
-        margin-bottom: 20px;
+    .site-header {
+        margin-bottom: 2rem;
     }
 
-    article h2 {
-        font-size: 20px;
+    .site-header h1 {
+        font-size: 2rem;
     }
 
-    article p {
-        font-size: 14px;
+    .articles-grid {
+        gap: 1.5rem;
+    }
+
+    .post-card {
+        padding: 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    body {
-        padding: 1vh;
+    .site-header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .post-card h2 {
+        font-size: 1.25rem;
     }
 
-    article {
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    article h2 {
-        font-size: 18px;
-    }
-
-    article p {
-        font-size: 13px;
-        line-height: 20px;
-    }
-
-    article a {
-        padding: 6px 12px;
-        font-size: 14px;
+    .meta, .excerpt {
+        font-size: 0.875rem;
     }
 }

@@ -3,38 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Landing Page</title>
+    <title>SonicCore - Professional Wireless Audio</title>
     <link rel="stylesheet" href="land_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <h1>Introducing Our Revolutionary Product</h1>
-    </header>
-    <main>
-        <section id="product-description">
-            <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="Wireless headphones product image">
-            <div class="div-para"><div class="inner"><p>Experience audio like never before with our cutting-edge wireless headphones. Designed for ultimate comfort and crystal-clear sound, these headphones feature advanced noise-cancellation technology, a 24-hour battery life, and seamless Bluetooth connectivity. Whether you're immersing yourself in music, taking calls on the go, or enjoying your favorite podcasts, our headphones deliver unmatched quality and style to elevate your everyday audio experience.</p></div></div>
-        </section>
-        <div class="btn">
-        <a href="#signup" class="cta-button">Get Started Now</a>
+    <header class="navbar">
+        <div class="container nav-container">
+            <div class="logo">Sonic<span>Core</span></div>
+            <nav class="desktop-nav">
+                <a href="#features">Features</a>
+                <a href="#about">About</a>
+                <a href="#signup" class="btn btn-outline nav-btn">Notify Me</a>
+            </nav>
         </div>
-        <section id="signup">
-            <h2>Join Our Newsletter</h2>
-            <form action="/subscribe" method="post">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="name" required aria-required="true">
-                
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required aria-required="true">
-                
-                <label for="updates">
-                    <input type="checkbox" id="updates" name="updates">
-                    Receive product updates
-                </label>
-                
-                <input type="submit" value="Subscribe">
-            </form>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">Next Generation Audio</span>
+                    <h1>Experience Sound in Its Purest Form</h1>
+                    <p>Designed for ultimate comfort and crystal-clear sound, our headphones feature advanced noise-cancellation technology and a 24-hour battery life.</p>
+                    <div class="hero-cta">
+                        <a href="#signup" class="btn btn-primary">Reserve Early Access</a>
+                        <a href="#features" class="btn btn-ghost">Learn More <i class="fa-solid fa-arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-image-overlay"></div>
+                    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?ixlib=rb-4.0.3&auto=format&fit=crop&w=700&q=80" alt="SonicCore Wireless Headphones">
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Engineered for Perfection</h2>
+                    <p>Every detail has been crafted to provide an unparalleled listening experience.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-volume-high"></i>
+                        <h3>Active Noise Cancel</h3>
+                        <p>Block out the world and immerse yourself in your favorite melodies.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-battery-full"></i>
+                        <h3>24H Battery Life</h3>
+                        <p>Enjoy continuous playback all day long with rapid charging technology.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-bluetooth"></i>
+                        <h3>Seamless Sync</h3>
+                        <p>Instant Bluetooth 5.2 connectivity across all your smart devices.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-feather"></i>
+                        <h3>Featherlight Design</h3>
+                        <p>Ergonomic memory foam cushions for hour-after-hour comfort.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Subscription Section -->
+        <section id="signup" class="signup-section">
+            <div class="container">
+                <div class="signup-container">
+                    <div class="signup-content">
+                        <h2>Don't Miss the Launch</h2>
+                        <p>Be the first to know when SonicCore becomes available. Exclusive early bird pricing for the first 500 subscribers.</p>
+                        
+                        <form action="#" class="modern-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="checkbox-group">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                    Receive product updates and exclusive offers
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary btn-block">Keep Me Updated</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo">Sonic<span>Core</span></div>
+                <p>Pure sound, purely designed.</p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SonicCore. All rights reserved.</p>
+                <div class="socials">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,3 +1,27 @@
+:root {
+    --bg-color: #fafafa;
+    --text-color: #1e293b;
+    --text-muted: #64748b;
+    --primary: #8b5cf6;
+    --item-bg: #ffffff;
+    --item-border: #e2e8f0;
+    --item-hover: #f8fafc;
+    --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --text-color: #f1f5f9;
+        --text-muted: #94a3b8;
+        --primary: #a78bfa;
+        --item-bg: #1e293b;
+        --item-border: #334155;
+        --item-hover: #2dd4bf1a;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,91 +29,142 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    padding: 2vh;
-    background-color: #f8f9fa;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 3rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-#faq {
-    max-width: 80vw;
+.faq-container {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-#faq h1 {
-    font-size: 32px;
+.faq-header {
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    margin-bottom: 3rem;
 }
 
-#faq ul {
-    list-style: none;
+.faq-header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--primary), #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-#faq li {
-    margin-bottom: 20px;
-    padding: 15px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
+.faq-header p {
+    color: var(--text-muted);
+    font-size: 1.125rem;
 }
 
-#faq h2 {
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #007bff;
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#faq p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #333;
+.faq-item {
+    background-color: var(--item-bg);
+    border: 1px solid var(--item-border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+    border-color: var(--primary);
+}
+
+.faq-item summary {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 500;
+    cursor: pointer;
+    list-style: none; /* Hide default arrow */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--text-color);
+    transition: background-color 0.2s;
+}
+
+.faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Custom Plus Icon using pseudo-elements */
+.faq-item summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: 400;
+    transition: transform 0.3s ease, color 0.3s;
+    color: var(--primary);
+    line-height: 1;
+}
+
+.faq-item[open] summary::after {
+    content: '−'; /* Minus sign */
+    transform: rotate(180deg);
+}
+
+.faq-item[open] summary {
+    border-bottom: 1px solid var(--item-border);
+    background-color: var(--item-hover);
+}
+
+.faq-content {
+    padding: 1.5rem;
+    color: var(--text-muted);
+    font-size: 1rem;
+    
+    /* Animation for expanding */
+    animation: fadeSlideDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeSlideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding: 1.5vh;
+    .faq-header h1 {
+        font-size: 2rem;
     }
-
-    #faq h1 {
-        font-size: 28px;
+    
+    .faq-item summary {
+        padding: 1rem 1.25rem;
+        font-size: 1rem;
     }
-
-    #faq li {
-        padding: 12px;
-        margin-bottom: 15px;
-    }
-
-    #faq h2 {
-        font-size: 18px;
-    }
-
-    #faq p {
-        font-size: 14px;
+    
+    .faq-content {
+        padding: 1.25rem;
+        font-size: 0.95rem;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding: 1vh;
+        padding: 2rem 1rem;
     }
-
-    #faq h1 {
-        font-size: 24px;
+    
+    .faq-header {
+        margin-bottom: 2rem;
     }
-
-    #faq li {
-        padding: 10px;
-        margin-bottom: 10px;
-    }
-
-    #faq h2 {
-        font-size: 16px;
-    }
-
-    #faq p {
-        font-size: 13px;
-        line-height: 20px;
+    
+    .faq-header h1 {
+        font-size: 1.75rem;
     }
 }

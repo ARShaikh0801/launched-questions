@@ -1,174 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.R. Shaikh - Developer Portfolio</title>
     <link rel="stylesheet" href="port_style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap"
-        rel="stylesheet">
-    <title>A.R.Shaikh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-
 <body>
-    <nav>
-        <ul>
-            <a href="#home">
-                <li class="active">Home</li>
-            </a>
-            <a href="#aboutme">
-                <li>About Me</li>
-            </a>
-            <a href="#skills">
-                <li>Skills</li>
-            </a>
-            <a href="#projects">
-                <li>Projects</li>
-            </a>
-            <a href="#Contact">
-                <li>Contact</li>
-            </a>
-        </ul>
-    </nav>
-    <div class="parent">
-        <div class="container" id="home">
-            <img src="images/user-img.png" alt="Developer Image">
-            <h1>A.R.Shaikh</h1>
-            <hr>
-            <h2>Frontend Developer | Django Backend Developer</h2>
-            <hr>
-            <h4>"Driven by innovation, I craft dynamic solutions using HTML, CSS, JavaScript, Python, Django, and
-                machine learning. Embracing modern web technologies, I transform ideas into impactful, user-centric
-                experiences that push boundaries and inspire progress in the digital world."</h4>
-            <br>
-            <div class="home-btn"><a href="#projects">View Projects</a>
-                <a href="#Contact">Contact Me</a>
-            </div>
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">A.R. <span>Shaikh</span></a>
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        </div>
-        <div class="container" id="aboutme">
-            <h1>About Me</h1>
-            <hr>
-            <h3>
-                <p id="aboutme-p1">I am Shaikh Abdul, pursuing Information and Communication Technology at Vishwakarma
-                    Government Engineering College. With a robust foundation in HTML, CSS, Python, and Django, I am
-                    passionate about crafting innovative, user-centric solutions that push technological boundaries.</p>
-                <br>
-                <p id="aboutme-p1">Aspiring to excel as a Full Stack Developer specializing in AI-ML and web
-                    development, I thrive on tackling complex challenges and transforming data into impactful,
-                    actionable insights.</p>
-            </h3>
-            <div class="about-cards">
-                <div class="about-item">
-                    <span>3+</span>
-                    <p>Programming Languages</p>
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section section">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="greeting">Hi, I'm</p>
+                    <h1 class="name">A.R. Shaikh</h1>
+                    <h2 class="role">Frontend & Django Developer</h2>
+                    <p class="bio">"Driven by innovation, I craft dynamic solutions using modern web technologies. I transform ideas into impactful, user-centric experiences that push boundaries."</p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-outline">Contact Me</a>
+                    </div>
                 </div>
-                <div class="about-item"><span>3+</span>
-                    <p>Projects</p>
-                </div>
-                <div class="about-item"><span>1</span>
-                    <p>Hackathons</p>
+                <!-- Using a placeholder pattern as original image might not be present -->
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-blob"></div>
+                    <img src="https://ui-avatars.com/api/?name=A+R+Shaikh&background=3b82f6&color=fff&size=512" alt="A.R. Shaikh" class="hero-img">
                 </div>
             </div>
-        </div>
-        <div class="container" id="skills">
-            <h1>Skills</h1>
-            <hr>
-            <h3>Technologies I Masterfully Wield..</h3>
-            <div class="skill-cards">
-                <div class="skills-item">
-                    <div class="img"><img src="images/html5.png" alt="HTML5"></div>
-                    <div class="text">
-                        <h2 class="logo-text">HTML 5</h2>
-                    </div>
-                </div>
-                <div class="skills-item">
-                    <div class="img"><img src="images/css3.png" alt="CSS3"></div>
-                    <div class="text">
-                        <h2 class="logo-text">CSS 3</h2>
-                    </div>
-                </div>
-                <div class="skills-item">
-                    <div class="img"><img src="images/python.png" alt="Python"></div>
-                    <div class="text">
-                        <h2 class="logo-text">Python</h2>
-                    </div>
-                </div>
-                <div class="skills-item">
-                    <div class="img"><img src="images/django.png" alt="django"></div>
-                    <div class="text">
-                        <h2 class="logo-text">Django</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container" id="projects">
-            <h1>Projects I Completed</h1>
-            <hr>
-            <div class="project-cards">
-                <div class="project-item">
-                    <div class="img"><img src="images/portfolio-logo.png" alt="Portfolio"></div>
-                    <h3 class="project-logo-text">My Portfolio</h3>
-                    <p class="project-para">My Firts Portfolio Website With Modern Design...</p>
-                    <div><span class="tech-project">HTML</span>
-                        <span class="tech-project">CSS</span>
-                        <span class="tech-project">Java Script</span>
-                    </div>
-                    <button class="project-btn">Visit</button><button class="project-btn">Git Hub</button>
-                </div>
-                <div class="project-item">
-                    <div class="img"><img src="images/gallery-logo.png" alt="Photo Gallery"></div>
-                    <h3 class="project-logo-text">Jquery Photo Gallery</h3>
-                    <p class="project-para">My Firts Photo Gallery which is Modern and well structured...</p>
-                    <div><span class="tech-project">HTML</span>
-                        <span class="tech-project">CSS</span>
-                        <span class="tech-project">Java Script</span>
-                        <span class="tech-project">Jquery</span>
-                    </div>
-                    <button class="project-btn">Visit</button><button class="project-btn">Git Hub</button>
-                </div>
-                <div class="project-item">
-                    <div class="img"><img src="images/to-do-logo.png" alt="Python"></div>
-                    <h3 class="project-logo-text">To Do List</h3>
-                    <p class="project-para">My Firts Project using Java script which is To-Do List...</p>
-                    <div><span class="tech-project">HTML</span>
-                        <span class="tech-project">CSS</span>
-                        <span class="tech-project">Java Script</span>
-                    </div>
-                    <button class="project-btn">Visit</button><button class="project-btn">Git Hub</button>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="container" id="Contact">
-            <h1>Contact Me</h1>
-            <hr>
-            <div class="contact-form">
-                <form action="#">
-                    <label for="name">Name : </label>
-                    <input type="text" name="name" id="name" required placeholder="Name">
-                    <label for="email">Email : </label>
-                    <input type="email" name="email" id="email" required placeholder="example@gmail.com">
-                    <label for="phoneno">Contact No. : </label>
-                    <input type="text" name="phoneno" id="phoneno" required maxlength="13" placeholder="+91XXXXXXXXXX">
-                    <label for="query">How Can I Help You ?</label>
-                    <textarea name="query" id="query" required placeholder="Enter Your Query Here"></textarea>
-                    <button id="contact-btn" type="submit">Submit</button>
-                </form>
+        <!-- About Section -->
+        <section id="about" class="about-section section bg-alt">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>About Me</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I am Shaikh Abdul, pursuing Information and Communication Technology at Vishwakarma Government Engineering College. With a robust foundation in HTML, CSS, Python, and Django, I am passionate about crafting innovative solutions.</p>
+                        <p>Aspiring to excel as a Full Stack Developer specializing in AI-ML and web development, I thrive on tackling complex challenges and transforming data into impactful insights.</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Languages</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">Hackathons</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Technical Skills</h2>
+                    <div class="header-line"></div>
+                    <p class="section-subtitle">Technologies I masterfully wield to build digital experiences</p>
+                </div>
+                
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <i class="fa-brands fa-html5 skill-icon" style="color: #E34F26;"></i>
+                        <h3>HTML5</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-brands fa-css3-alt skill-icon" style="color: #1572B6;"></i>
+                        <h3>CSS3</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-brands fa-js skill-icon" style="color: #F7DF1E;"></i>
+                        <h3>JavaScript</h3>
+                    </div>
+                    <div class="skill-card">
+                        <i class="fa-brands fa-python skill-icon" style="color: #3776AB;"></i>
+                        <h3>Python</h3>
+                    </div>
+                    <div class="skill-card">
+                         <i class="fa-brands fa-html5 skill-icon" style="color: #092E20;"></i> <!-- Placeholder for Django icon, as fa-django is often pro -->
+                        <h3>Django</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section section bg-alt">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <!-- Placeholder image, styling will make it look good -->
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                                <i class="fa-solid fa-briefcase"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>My Portfolio</h3>
+                            <p>My First Portfolio Website With Modern Design and responsive layouts.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #FF6B6B, #556270);">
+                                <i class="fa-solid fa-images"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>jQuery Photo Gallery</h3>
+                            <p>A modern, well-structured photo gallery with filtering capabilities.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>jQuery</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <div class="project-image">
+                            <div class="placeholder-img" style="background: linear-gradient(135deg, #00C9FF, #92FE9D);">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <h3>To-Do List App</h3>
+                            <p>A functional To-Do list application built with vanilla JavaScript.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="btn btn-sm btn-outline">Live Demo</a>
+                                <a href="#" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> Source</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2>Get In Touch</h2>
+                    <div class="header-line"></div>
+                    <p class="section-subtitle">Have a project in mind? Let's work together.</p>
+                </div>
+                
+                <div class="contact-content">
+                    <form class="contact-form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="phoneno">Contact No.</label>
+                            <input type="tel" id="phoneno" name="phoneno" placeholder="+91 XXXXXXXXXX">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="How can I help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="#" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 A.R. Shaikh. All rights reserved.</p>
         </div>
-    </div>
-    <footer>
-        <a href=""><i class="fab fa-linkedin"></i></a>
-        <a href=""><i class="fab fa-github"></i></a>
-        <a href=""><i class="fas fa-envelope"></i></a>
-        <hr>
-        <p>&copy; 2025 A.R.Shaikh. All rights reserved.</p>
     </footer>
-    
-</body>
 
+    <script>
+        // Simple mobile menu toggle
+        const navToggle = document.querySelector('.mobile-nav-toggle');
+        const primaryNav = document.querySelector('.primary-navigation');
+        const icon = navToggle.querySelector('i');
+
+        navToggle.addEventListener('click', () => {
+            const visibility = primaryNav.getAttribute('data-visible');
+            if (visibility === "false" || !visibility) {
+                primaryNav.setAttribute('data-visible', true);
+                navToggle.setAttribute('aria-expanded', true);
+                icon.classList.replace('fa-bars', 'fa-xmark');
+            } else {
+                primaryNav.setAttribute('data-visible', false);
+                navToggle.setAttribute('aria-expanded', false);
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            }
+        });
+        
+        // Close menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                primaryNav.setAttribute('data-visible', false);
+                navToggle.setAttribute('aria-expanded', false);
+                icon.classList.replace('fa-xmark', 'fa-bars');
+            });
+        });
+    </script>
+</body>
 </html>

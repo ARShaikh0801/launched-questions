@@ -1,3 +1,29 @@
+:root {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --primary: #10b981;
+    --primary-light: #d1fae5;
+    --border: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --radius: 16px;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-main: #f8fafc;
+        --text-muted: #94a3b8;
+        --primary: #34d399;
+        --primary-light: #064e3b;
+        --border: #334155;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,99 +31,125 @@
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #f8f9fa;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    padding: 3rem 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .container {
-    margin: 5vh 0;
-    text-align: center;
-}
-
-h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.items {
-    max-width: 80vw;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
+.section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.section-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--text-main);
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--text-muted);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
 .service-card {
-    display: inline-block;
-    width: 40%;
-    margin: 15px;
-    padding: 10px;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px #949393;
-    vertical-align: top;
-    height: 150px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.icon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--primary-light);
+    color: var(--primary);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .icon {
+    transform: scale(1.1);
 }
 
 h3 {
-    color: rgb(68, 192, 68);
-    font-size: 25px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    color: var(--text-main);
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .service-card p {
-    font-size: 16px;
-    line-height: 24px;
-    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
 }
 
 @media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 2.5rem;
+    }
+
+    .section-header h1 {
+        font-size: 2rem;
+    }
+
+    .services-grid {
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+
     .service-card {
-        display: block;
-        width: 70%;
-        margin: 15px auto;
-        height: auto;
-    }
-
-    h3 {
-        font-size: 22px;
-    }
-
-    .service-card p {
-        font-size: 14px;
+        padding: 2rem 1.5rem;
     }
 }
 
 @media (max-width: 480px) {
     body {
-        padding: 1vh;
+        padding: 2rem 1rem;
     }
 
-    .container {
-        margin: 3vh 0;
+    .section-header h1 {
+        font-size: 1.75rem;
     }
 
-    h1 {
-        font-size: 28px;
+    .icon {
+        font-size: 2rem;
+        width: 50px;
+        height: 50px;
     }
-
-    .items {
-        max-width: 90vw;
-    }
-
-    .service-card {
-        display: block;
-        width: 90%;
-        margin: 10px auto;
-        padding: 8px;
-        height: auto; 
-    }
-
-    h3 {
-        font-size: 20px;
-    }
-
-    .service-card p {
-        font-size: 13px;
-        line-height: 20px;
+    
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 }
