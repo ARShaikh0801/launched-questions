@@ -15,9 +15,11 @@
 
 ---
 
-<h2>Checkout live demo</h2>
-
-[see Live](https://arshaikh0801.github.io/launched-questions/)
+<div align="center">
+  <h2>✨ Checkout Live Demo</h2>
+  
+  [![Live Demo](https://img.shields.io/badge/See_Live_Demo-4F46E5?style=for-the-badge&logo=github&logoColor=white)](https://arshaikh0801.github.io/launched-questions/)
+</div>
 
 ## ✨ Why this Suite?
 
