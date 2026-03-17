@@ -97,7 +97,7 @@ xdg-open index.html
 **A. R. Shaikh**<br>
 *Forward-thinking Frontend & Django Developer*
 
-<a href="https://github.com/ARShaikh0801">GitHub</a> • <a href="#">LinkedIn</a> • <a href="#">Twitter</a>
+<a href="https://github.com/ARShaikh0801">GitHub</a> • <a href="www.linkedin.com/in/shaikh-abdulrauf-asifparvez-b4485435a">LinkedIn</a>
 
 <br>
 <p><i>Copyright © 2025 A.R.Shaikh. All rights reserved.</i></p>
