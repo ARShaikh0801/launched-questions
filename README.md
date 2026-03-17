@@ -15,6 +15,10 @@
 
 ---
 
+<h2>Checkout live demo</h2>
+
+[see Live](https://arshaikh0801.github.io/launched-questions/)
+
 ## ✨ Why this Suite?
 
 Built for the modern web, this repository contains 10 distinct projects that focus on clean architecture, semantic markup, and **stunning visual aesthetics**. We strictly follow the latest conventions—no bulky frameworks, just pure, beautiful HTML & CSS.
